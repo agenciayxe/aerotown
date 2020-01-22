@@ -1,0 +1,442 @@
+$padrao: #1d2839;
+$detalhe-claro: #e4dcc6;
+$detalhe-escuro: #b87955;
+
+$h-center-block: translateX(-50%);
+$v-center-block: translateY(-50%);
+$sans-serif: "Foundry Sterling", sans-serif;
+$sans-serif2: "Bourton", sans-serif;
+
+@mixin transform($trans){
+	-webkit-transform: $trans;
+	-o-transform: $trans;
+	-ms-transform: $trans;
+	transform: $trans;
+}
+@mixin transition($trans){
+	-webkit-transition: $trans;
+	-moz-transition: $trans;
+	-ms-transition: $trans;
+	-o-transition: $trans;
+	transition: $trans;
+}
+@font-face {
+	src: url('../assets/fonts/foundry-medium.otf');
+	font-family: 'Foundry Sterling';
+	font-weight: 500;
+}
+@font-face {
+	src: url('../assets/fonts/foundry-semi.otf');
+	font-family: 'Foundry Sterling';
+	font-weight: 600;
+}
+@font-face {
+	src: url('../assets/fonts/foundry-bold.otf');
+	font-family: 'Foundry Sterling';
+	font-weight: 700;
+}
+@font-face {
+	src: url('../assets/fonts/BourtonBaseDrop.ttf');
+	font-family: 'Bourton';
+	font-weight: 300;
+}
+@font-face {
+	src: url('../assets/fonts/BourtonBase.ttf');
+	font-family: 'Bourton';
+	font-weight: 400;
+}
+@font-face {
+	src: url('../assets/fonts/BourtonDropLine.ttf');
+	font-family: 'Bourton';
+	font-weight: 900;
+}
+
+.h-center-block{
+	position: absolute;	
+	left: 50%;
+	@include transform($h-center-block);
+}
+.v-center-block{
+	position: absolute;	
+	top: 50%;
+	@include transform($v-center-block);
+}
+.hv-center-block{
+	position: absolute;	
+	left: 50%;
+	top: 50%;
+	@include transform($h-center-block +" "+ $v-center-block);
+}
+body, p{
+	font-family: $sans-serif;
+	color: $padrao;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: $sans-serif;
+	color: $padrao;
+}
+a{
+	@include transition(color 0.3s);
+	color: $padrao;
+	&:hover, &:focus{
+		text-decoration: none;
+		outline: 0;	
+	}
+}
+.btn{
+	border: 1px solid #002d4b;
+	border-radius: 0;
+	background: transparent;
+	padding: 7px 30px;
+	color: #002d4b;
+	transition: color 0.3s;
+	font-weight: 600;
+	width: 300px;
+	max-width: 50%;
+	transition: 0.3s;
+	&.inv{
+		border: 1px solid #fff;
+		color: #fff;
+		&:hover{
+			background: #fff;
+			color: #002d4b;
+		}
+	}
+	&:hover{
+		background: #002d4b;
+		color: #fff;
+	}
+}
+.btn:focus, .btn:active{
+	outline: none !important;
+}
+img{
+	max-width: 100%;
+}
+main{
+	overflow: hidden;
+}
+
+.owl-carousel{
+	img{
+		width: 100%;
+	}
+	.owl-nav{
+		position: absolute;
+		height: 0;
+		top: 50%;
+		left: 0px;
+		width: 100%;
+		color: #fff;
+		margin: 0;
+		[class*=owl-]{
+			font-size: 50px !important;
+			line-height: 0 !important;
+			height: 0;
+			outline: none !important;
+			span{
+				display: inline-block;
+				line-height: 0 !important;
+				height: 0;				
+			}
+		}
+		.owl-prev{
+			float: left;
+		}
+		.owl-next{
+			float: right;
+		}
+	}
+}
+[class*="icono"] {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		color: #666;
+		box-sizing: border-box;
+	&:after, &:before {
+		content: "";
+		box-sizing: border-box;
+	}
+}
+[class*="icono-arrow1"]{
+	width: 20px;
+	height: 20px;
+	border-width: 4px 4px 0 0;
+	border-style: solid;
+	margin: 10px;
+	&:before{
+		right: 0;
+		top: -3px;
+		position: absolute;
+		height: 4px;
+		box-shadow: inset 0 0 0 32px;
+		transform: rotate(-45deg);
+		width: 50px;
+		transform-origin: right top;
+	}
+	&[class*="-left"]{
+		transform: rotate(45deg);
+		&[class*="-up"]{
+			transform: none;
+		}
+		&[class*="-down"]{
+			transform: rotate(90deg);
+		}
+	}
+	&[class*="-right"]{
+		transform: rotate(-135deg);
+		&[class*="-up"]{
+			transform: rotate(-90deg);
+		}
+		&[class*="-down"]{
+			transform: rotate(180deg);
+		}
+	}
+	&[class*="-up"]{
+		transform: rotate(-45deg);
+	}
+	&[class*="-down"]{
+		transform: rotate(135deg);
+	}
+}
+
+section.banner-topo{
+	padding: 150px 0 150px;
+	background: #0f2337;
+	position: relative;
+	.container{
+		.row{
+			.slider{
+				position: relative;
+				.owl-carousel.owl-theme{
+					padding: 0 200px 0 0;
+				}
+				.owl-carousel {
+					.owl-video-wrapper{
+						@extend .hv-center-block;
+						width: 100%;
+						background: transparent;
+					}
+					.owl-video-tn{
+						display: none;
+					}
+					.owl-video-play-icon{
+					    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+					}
+				}
+				.muda-slide{
+					@extend .v-center-block;
+					right: 100px;
+					width: 35px;
+					height: 35px;
+					background: #d7b995;
+					display: flex;
+					outline: none !important;
+					border: 0;
+					z-index: 9;
+					[class*="icono"]{
+						color: #fff;
+						position: absolute;
+						top: -3px;
+						left: 100%;
+					}
+				}
+			}
+		}
+	}
+	.logo-box{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: calc( 100% - ( 100% - 1170px)/2 - 250px );
+		background: #0d141c;
+		.wrap-logo{
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			height: 200px;
+			background: #d7b995;
+			h1{
+				margin: 20px 0 0 50px;
+			}
+		}
+	}
+	.chamada{
+		position: absolute;
+		right: 40px;
+		bottom: -95px;
+		font-size: 40px;
+		font-weight: 900;
+		color: $detalhe-claro;
+		line-height: 0.5;
+		z-index: 9;
+		filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));
+		span{
+			position: relative;
+			left: -5%;
+			font-family: $sans-serif2;
+			font-size: 130px;
+			color: #fff;
+		}
+	}
+}
+
+.modal{
+	.close{
+		position: absolute;
+		z-index: 999;
+		top: 15px;
+		right: 15px;
+		font-size: 50px;
+		opacity: 1;
+		outline: none!important;
+	}
+	.modal-dialog{
+		.modal-content{
+			background: $detalhe-claro;
+			padding: 100px 50px;
+			.modal-body{
+				padding: 0;
+				border-radius: 0;
+				border: 0;
+				h2{
+					font-family: $sans-serif2;
+					color: $detalhe-escuro;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	&.modal-eventos{
+		.modal-dialog{
+			.modal-content{
+				padding: 0;
+			}
+		}
+	}
+	&.modal-promocao{
+		.modal-dialog{
+			.modal-content{
+				padding: 0;
+			}
+		}
+	}
+	&.modal-destaque{
+		.modal-dialog{
+			width: 900px;
+			max-width: 97%;
+			.modal-content{
+				padding: 0;
+			}
+		}
+	}	
+}
+
+
+
+/* XS */ 
+@media (max-width: 767px){ 
+	section.banner-topo .container .row .slider .owl-carousel.owl-theme {
+	    padding: 0 30px 0 0;
+	}
+	section.banner-topo .container .row .slider .muda-slide {
+	    right: 20px;
+	    width: 25px;
+        height: 25px;
+	}
+	section.banner-topo .container .row .slider .muda-slide [class*=icono]{
+	    top: -5px;
+	}
+	[class*=icono-arrow1]{
+		width: 15px;
+		height: 15px;
+	}
+	[class*=icono-arrow1]:before{
+	    width: 35px;
+	}
+	section.banner-topo .chamada{
+		font-size: 20px;
+		right: -15px;
+		bottom: -45px;
+	}
+	section.banner-topo .chamada span{
+		font-size: 60px;
+	}
+	section.banner-topo .logo-box{
+	    left: calc( 100% - 100px );
+	}
+	section.banner-topo {
+	    padding: 80px 0 65px;
+	}
+	section.banner-topo .logo-box .wrap-logo{
+		height: 85px;
+	}
+	section.banner-topo .container .row .slider{
+		margin-left: -10px;
+	}
+	.btn{
+		max-width: 80%;
+	}
+
+	.modal .modal-dialog .modal-content{
+		padding: 75px 25px;
+	}
+	.modal .modal-dialog .modal-content .modal-body h2{
+		font-size: 20px;
+	}
+	.modal .close {
+	    top: 5px;
+	    right: 5px;
+	    font-size: 32px;
+	}
+	.modal.modal-destaque .modal-dialog{
+		max-width: 95%;
+	}
+}
+@media (max-width: 539px){   
+}
+@media (max-width: 419px){    
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+	section.banner-topo .logo-box{
+		left: calc( 100% - ( 100% - 750px)/2 - 150px );
+	}
+	section.banner-topo .chamada{
+		font-size: 30px;
+	}
+	section.banner-topo .chamada span{
+		font-size: 100px;
+	}
+	section.banner-topo .logo-box .wrap-logo h1 {
+	    margin: 20px 5px 0 20px;
+	}
+	section.banner-topo .container .row .slider .owl-carousel.owl-theme {
+	    padding: 0 120px 0 0;
+	}
+	section.banner-topo .container .row .slider .muda-slide {
+    	right: 50px;
+    }
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+	section.banner-topo .logo-box .wrap-logo h1 {
+	    margin: 20px 10px 0 25px;
+	}
+	section.banner-topo .container .row .slider .owl-carousel.owl-theme {
+	    padding: 0 120px 0 0;
+	}
+	section.banner-topo .container .row .slider .muda-slide {
+    	right: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

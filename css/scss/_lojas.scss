@@ -1,0 +1,365 @@
+main.lojas{	
+	section.lojas{
+		padding: 50px 0 ;
+		.container{
+			.busca{
+				input{
+					width: 100%;
+					padding: 15px 10px;
+					margin-bottom: 30px;
+					outline: none !important;
+				}
+			}
+			.categorias{
+				.titulo{
+					font-size: 30px;
+					font-weight: bold;
+				}
+				.lista-categorias{
+					padding: 15px 0;
+					.item{
+						font-size: 15px;
+						color: #98a0ab;
+						margin: 10px 0;
+						cursor: pointer;
+						&.maior{
+							border-top: 1px solid #98a0ab;
+							padding-top: 10px;
+							font-size: 20px;
+							font-weight: bold;
+						}
+						&.ativo{
+							color: $padrao;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			#lista-lojas{
+				.list{
+					list-style: none;
+					.loja{
+						display: flex;
+						padding: 20px;						
+						justify-content: space-between;
+						align-items: center;
+						margin-bottom: 30px;
+						.titulo{
+							position: relative;
+							font-size: 35px;
+							font-weight: bold;
+							line-height: 1;
+							border: 1px solid $padrao;
+							.categoria{
+								font-size: 18px;
+								font-weight: 400;
+							}
+							.social{
+								position: absolute;
+								@include transform($v-center-block);
+								top: 50%;
+								right: 0;
+							}
+						}
+						.num{
+							width: 30%;
+							font-size: 22px;
+							font-weight: bold;
+							text-align: center;
+						}
+						.telefone{
+							width: 25%;
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* XS */ 
+@media (max-width: 767px){ 
+	main.lojas section.lojas .container .categorias .titulo {
+	    font-size: 25px;
+	    margin-bottom: 30px;
+	    width: 100%;
+	    max-width: 100%;
+	    background: #002d4b;
+	    color: #fff;
+	    i.fa{
+	    	font-size: 18px;
+	    	margin-left: 5px;
+	    }
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo {
+	    font-size: 26px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo .categoria {
+	    font-size: 14px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		font-size: 15px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+	    width: 100%;
+	    text-align: left;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		font-size: 13px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list{
+		padding: 0;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja{
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 539px){   
+}
+@media (max-width: 419px){    
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+	main.lojas section.lojas .container .categorias .titulo {
+	    font-size: 25px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo {
+	    font-size: 26px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo .categoria {
+	    font-size: 14px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		font-size: 15px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		width: 20%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		width: 30%;
+		font-size: 13px;
+	}
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		width: 20%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		width: 30%;
+	}
+}
+
+@media (min-width: 1200px) {
+}
+
+
+/* -------------------------------------- MODULO LOJAS -------------------------------------- */
+
+.lista-lojas {
+	text-transform: uppercase;
+	text-align: left;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: column;
+	align-items: center
+}
+@media (min-width:980px) {
+.lista-lojas {
+	flex-flow: row wrap;
+	border-left: 1px solid #f1f1f2;
+	justify-content: flex-start;
+	padding-left: 40px;
+	align-items: baseline
+}
+.lista-lojas .bt-filtros {
+	display: none
+}
+}
+.lista-lojas .bt-filtros {
+	width: 95px;
+	background-color: #00417f;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	font-size: 11px;
+	padding: 8px 10px;
+	border-radius: 3px;
+	margin: 20px 0
+}
+.lista-lojas .titulo a, .lista-lojas article a {
+	color: #000
+}
+.lista-lojas article {
+	width: 240px;
+	height: 210px;
+	border: 1px solid #F1F1F2!important;
+	margin: 0 0 30px;
+	background-color: #fff
+}
+@media (min-width:980px) {
+.lista-lojas article {
+	margin: 0 30px 30px 0
+}
+}
+.lista-lojas article:hover {
+	border: 1px solid #ffcf16!important
+}
+.lista-lojas .titulo {
+	padding: 20px;
+	border-bottom: 1px solid #f1f1f2
+}
+.lista-lojas .titulo span {
+	font-size: 11px;
+	margin-bottom: 5px
+}
+.lista-lojas .titulo h3 {
+	font-size: 18px
+}
+.lista-lojas .box {
+	display: flex;
+	padding: 20px
+}
+.lista-lojas .box ul {
+	font-size: 12px;
+	padding: 0 40px 0 10px
+}
+.lista-lojas .box ul li {
+	margin-bottom: 5px
+}
+.lista-lojas .box ul li svg {
+	position: relative;
+	top: 5px;
+	margin-right: 5px
+}
+.lista-lojas .box ul li svg path {
+	fill: #003E81
+}
+.lista-lojas .box ul li.loja {
+	margin-left: 27px
+}
+.lista-lojas .box ul li:last-child {
+	margin-top: 15px
+}
+.lista-lojas .box .left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 70px
+}
+#pag-interna.pag-lojas .loja-interna {
+	position: relative;
+	z-index: 2
+}
+#pag-interna.pag-lojas .loja-interna .container {
+	padding-top: 45px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center
+}
+#pag-interna.pag-lojas .loja-interna:before {
+	width: 100%;
+	height: 100%;
+	background-color: #f5f5f3;
+	z-index: -1
+}
+@media (min-width:980px) {
+#pag-interna.pag-lojas .loja-interna:before {
+	height: 240px
+}
+}
+#pag-interna.pag-lojas .loja-interna .box-imagem {
+	width: 500px;
+	height: auto;
+	text-align: center;
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #f0f0f1;
+	margin-bottom: 20px
+}
+@media (min-width:980px) {
+#pag-interna.pag-lojas .loja-interna .box-imagem {
+	height: 325px;
+	margin-bottom: 0
+}
+}
+#pag-interna.pag-lojas .loja-interna article {
+	padding-left: 50px;
+	text-transform: uppercase;
+	margin: 15px 0 30px
+}
+@media (min-width:980px) {
+#pag-interna.pag-lojas .loja-interna article {
+	margin: 0
+}
+}
+#pag-interna.pag-lojas .loja-interna article span {
+	display: block
+}
+#pag-interna.pag-lojas .loja-interna article h3 .tex-n {
+	font-weight: 400
+}
+#pag-interna.pag-lojas .loja-interna article h3 .tex-m {
+	font-size: 18px;
+	margin: 10px 0 40px
+}
+#pag-interna.pag-lojas .loja-interna article div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+}
+@media (min-width:980px) {
+#pag-interna.pag-lojas .loja-interna article h3 .tex-m {
+	font-size: 26px
+}
+#pag-interna.pag-lojas .loja-interna article div {
+	flex-direction: initial;
+	justify-content: space-between;
+	width: 450px
+}
+}
+#pag-interna.pag-lojas .loja-interna article li {
+	align-items: center;
+	display: flex;
+	margin-bottom: 15px
+}
+#pag-interna.pag-lojas .loja-interna article li svg path {
+	fill: #003E81;
+	margin: 0 10px
+}
+#pag-interna.pag-lojas .loja-interna article .icon {
+	margin-right: 10px
+}
+#pag-interna.pag-lojas .loja-interna article a {
+	width: 135px;
+	height: 40px;
+	background-color: #00417f;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 11px;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+#pag-interna.pag-lojas .loja-interna article a svg {
+	margin-right: 5px
+}
+#pag-interna.pag-lojas .loja-interna article a:hover {
+	background-color: #003E81
+}
+#pag-interna.pag-lojas .loja-interna article:hover {
+	border: none;
+	background: 0 0
+}
