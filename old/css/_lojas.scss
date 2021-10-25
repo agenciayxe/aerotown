@@ -1,0 +1,164 @@
+main.lojas{	
+	section.lojas{
+		padding: 50px 0 ;
+		.container{
+			.busca{
+				input{
+					width: 100%;
+					padding: 15px 10px;
+					margin-bottom: 30px;
+					outline: none !important;
+				}
+			}
+			.categorias{
+				.titulo{
+					font-size: 30px;
+					font-weight: bold;
+				}
+				.lista-categorias{
+					padding: 15px 0;
+					.item{
+						font-size: 15px;
+						color: #98a0ab;
+						margin: 10px 0;
+						cursor: pointer;
+						&.maior{
+							border-top: 1px solid #98a0ab;
+							padding-top: 10px;
+							font-size: 20px;
+							font-weight: bold;
+						}
+						&.ativo{
+							color: $padrao;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			#lista-lojas{
+				.list{
+					list-style: none;
+					.loja{
+						display: flex;
+						padding: 20px;						
+						justify-content: space-between;
+						align-items: center;
+						border: 1px solid $padrao;
+						margin-bottom: 30px;
+						.titulo{
+							position: relative;
+							font-size: 35px;
+							font-weight: bold;
+							line-height: 1;
+							width: 45%;
+						    padding: 0 30px 0 0;
+							.categoria{
+								font-size: 18px;
+								font-weight: 400;
+							}
+							.social{
+								position: absolute;
+								@include transform($v-center-block);
+								top: 50%;
+								right: 0;
+							}
+						}
+						.num{
+							width: 30%;
+							font-size: 22px;
+							font-weight: bold;
+							text-align: center;
+						}
+						.telefone{
+							width: 25%;
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* XS */ 
+@media (max-width: 767px){ 
+	main.lojas section.lojas .container .categorias .titulo {
+	    font-size: 25px;
+	    margin-bottom: 30px;
+	    width: 100%;
+	    max-width: 100%;
+	    background: #002d4b;
+	    color: #fff;
+	    i.fa{
+	    	font-size: 18px;
+	    	margin-left: 5px;
+	    }
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo {
+	    font-size: 26px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo .categoria {
+	    font-size: 14px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		font-size: 15px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+	    width: 100%;
+	    text-align: left;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		font-size: 13px;
+	    width: 100%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list{
+		padding: 0;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja{
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 539px){   
+}
+@media (max-width: 419px){    
+}
+
+/* SM */
+@media (min-width: 768px) and (max-width: 991px) {
+	main.lojas section.lojas .container .categorias .titulo {
+	    font-size: 25px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo {
+	    font-size: 26px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .titulo .categoria {
+	    font-size: 14px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		font-size: 15px;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		width: 20%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		width: 30%;
+		font-size: 13px;
+	}
+}
+
+/* MD */
+@media (min-width: 992px) and (max-width: 1199px) {
+	main.lojas section.lojas .container #lista-lojas .list .loja .num{
+		width: 20%;
+	}
+	main.lojas section.lojas .container #lista-lojas .list .loja .telefone{
+		width: 30%;
+	}
+}
+
+@media (min-width: 1200px) {
+}

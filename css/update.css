@@ -1,0 +1,59 @@
+.bg-1 {
+	background: rgba(206, 184, 149, .5)!important;
+}
+
+footer section.contato {
+	background: #5F7897!important;
+}
+
+footer section.contato ::placeholder {
+	color: white;
+}
+
+header {
+	background-color: rgba(255, 255, 255, 1);
+	transition: all ease 1s;
+}
+
+header.scrolled {
+	background-color: rgba(255, 255, 255, .9);
+}
+
+header .logo {
+	margin: 0;
+	height: 110px;
+	transition: all ease 250ms;
+	transition-delay: 300ms;
+	width: 110px;
+}
+
+header.scrolled .logo {	
+	height: 50px;
+	width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+	header.scrolled .logo {
+		margin-top: -25px;
+	}
+}
+
+#servicos {
+	padding: 75px 0 50px;
+    text-align: center;
+}
+
+.galeria .content-text {
+	background: white;
+}
+
+.slider .item .content .content-text {
+	min-height: 155px;
+}
+
+.row-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap-reverse;
+}

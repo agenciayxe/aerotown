@@ -1,0 +1,287 @@
+* {
+	font-family: 'Bebas Neue';
+}
+body {
+
+}
+header {
+	background-image: url('../blackfriday/aerotown_blackfriday_pattern.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+	header .img-header-title {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+	}
+	header .img-header-logo {
+		display: block;
+		margin: 10px auto;
+		max-width: 270px;
+	}
+	header .call-blackfriday {
+		text-align: center;
+		color: #dc9600;
+		font-size: 42px;
+		line-height: 1;
+		margin: 15px 0px;
+	}
+	header .text-blackfriday {
+		text-align: center;
+		color: #881b01;
+		font-size: 34px;
+		line-height: 1;
+		margin: 15px 0px;
+	}
+.count-down {
+	padding: 6px 15px;
+	background-color: #881b01;
+	text-align: center;
+	color: #f1e2c6;
+}
+	#id-countdown {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    font-size: 14px;
+	}
+	#id-countdown > div{
+		font-size: 30px;
+		margin: 0px 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	#id-countdown > div > span {
+		font-size: 18px;
+		margin: 10px;
+	}
+	.count-down h1 {
+		color: #f1e2c6;
+		margin-bottom: 0px;
+	}
+.content-blackfriday {
+	position: relative;
+	min-height: 200px;
+	background-color: #0a0a0a;
+	padding: 0px 0px 80px;
+	background-image: url('../blackfriday/background-blackfriday.jpg');
+	/* -webkit-background-size: 80% auto;
+	background-size: 80% auto; */
+	background-position: center top;
+	/* background-repeat: no-repeat; */
+	/* background-attachment: fixed; */
+}
+	.content-blackfriday .img-shadow {
+		position: absolute;
+		width: 100%;
+		top: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.content-blackfriday .img-shadow img {
+		max-width: 560px;
+		width: 100%;
+	}
+	.content-blackfriday .content-img-title {
+		width: 100%;
+		max-width: 600px;
+		margin: 20px 0px;
+	}
+	.content-blackfriday .title-blackfriday {
+		font-size: 60px;
+		color: #761601;
+	}
+		.content-blackfriday .card {
+			background-color: transparent !important;
+			border: none;
+		}
+		.content {
+			background-color: #1b1b1b;
+			overflow: hidden;
+			border-radius: 10px;
+			margin: 7px 0px;
+		}
+			.content .content-text {
+				padding: 15px;
+				color: white;
+				font-weight: normal;
+			}
+				.content .content-text .content-ref {
+					font-size: 15px;
+				}
+				.content .content-text .content-title {
+					color: #ffe100;
+					font-size: 23px;
+				}
+				.content .content-text .content-price {
+					
+				}
+					.content .content-text .content-price-regular {
+						font-size: 17px;
+					}
+					.content .content-text .content-price-promotion {
+						font-size: 30px;
+					}
+				.content .content-text .content-store-info {
+					font-size: 15px;
+					text-align: right;
+				}
+				.content .content-text .content-store-title {
+					font-size: 22px;
+					text-align: right;
+				}
+				.content .content-text .content-store-instagram {
+					color: white;
+					font-size: 22px;
+					text-align: right;
+				}
+
+@media screen and (max-width: 576px) {
+	#id-countdown > div{
+		margin: 0px 3px;
+	}
+	#id-countdown > div > span {
+		margin: 10px;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	
+}
+@media screen and (min-width: 1200px) {
+	
+}
+
+.section-signature {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	background-color: #4b1b0b;
+	padding: 5px 10px 5px;
+}
+	.section-signature .title-signature {
+		padding: 5px 0px;
+		
+	}
+	.section-signature .title-signature h1 {
+		text-transform: none !important;
+		font-family: 'Open Sans';
+		font-size: 19px;
+		font-weight: normal;
+		color: #eeeeee;
+	}
+	.section-signature .text-signature {
+		padding: 5px 0px;
+	}
+	.section-signature .text-signature p {
+		font-size: 28px;
+		text-transform: uppercase;
+		font-weight: 800;
+		color: $corSecundaria;
+		line-height: 1.2;
+	}
+	.section-signature .form-area {
+		padding: 10px 0px;
+	}
+	.section-signature .form-area .input-field {
+	    background-color: #eeeeee;
+	    padding: 10px 15px;
+	    border: none;
+	    font-weight: 600;
+	    font-size: 18px;
+	}
+	.section-signature .form-area .button-form {
+	    background-color: #eeeeee;
+	    padding: 7px 20px;
+	    border: none;
+	    margin: 0px;
+	    color: #4b1b0b;
+	    font-size: 17px;
+	    font-style: normal;
+	}
+	.section-signature .signature-zap {
+		font-size: 78px;
+		padding: 15px;
+		text-align: right;
+		font-weight: bold;
+		font-style: italic;
+	}
+	.section-signature .signature-zap a {
+		color: #00c439;
+	}
+	.section-signature .icons.icon-whatsapp {
+		height: 80px;
+		width: 80px;
+		margin: -15px 0px;
+	}
+@media screen and (max-width: 576px) {
+	.section-signature .title-signature h1 {
+		font-size: 19px;
+		padding: 15px 0px;
+	}
+	.section-signature .form-area {
+		padding: 0px;
+	}
+	.section-signature .signature-zap {
+		font-size: 25px;
+		text-align: center;
+	}
+	.section-signature .icons.icon-whatsapp {
+		width: 45px;
+		height: 45px;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+	.section-signature .title-signature h1 {
+		font-size: 35px;
+	}
+	.section-signature .form-area {
+		padding: 0px;
+	}
+	.section-signature .signature-zap {
+		font-size: 28px;
+		text-align: center;
+	}
+	.section-signature .icons.icon-whatsapp {
+		width: 50px;
+		height: 50px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.section-signature .title-signature {
+		padding: 10px 0px;
+	}
+	.section-signature .title-signature h1 {
+		font-size: 28px;
+	}
+	.section-signature .signature-zap {
+		font-size: 40px;
+		text-align: center;
+	}
+	.section-signature .icons.icon-whatsapp {
+		width: 55px;
+		height: 55px;
+	}
+	.section-signature .text-signature {
+		padding: 10px 0px;
+	}
+	.section-signature .text-signature p {
+		font-size: 21px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.section-signature .signature-zap {
+		font-size: 60px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	
+}
