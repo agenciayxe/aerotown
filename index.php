@@ -402,5 +402,9 @@ if ($popupQuery->have_posts()) {
 		</div>
 	</div>
 </div>
-<script>$(".nav-home").addClass("pag-ativa");</script>
-<?php get_footer(); ?>
+<script>$(".nav-home").addClass("pag-ativa");</script>	
+<?php 
+if ($_GET['a'] == 'b') {
+	get_template_part('templates/home', 'roleta');
+}
+get_footer(); ?>

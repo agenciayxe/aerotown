@@ -104,6 +104,7 @@
     </div>
 </footer>
 <?php wp_footer(); ?>
+<script src="<?php bloginfo('template_url') ?>/assets/bootstrap/bootstrap.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/swiper.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/script-contact.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/vendor.min.js"></script>

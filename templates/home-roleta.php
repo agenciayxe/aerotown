@@ -1,15 +1,81 @@
+<style>
+.my-3 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.the_wheel {
+    background-image: url(<?php echo get_bloginfo('template_url'); ?>/roleta/wheel_back.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 320px;
+    height: 480px;
+    padding-top: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-<div class="modal fade" id="modalRoleta" tabindex="-1" aria-labelledby="modalRoleta" aria-hidden="true">
-  <div class="modal-dialog modal-xl ">
-    <div class="modal-content ">
-			<div class="modal-body content-roleta">
+.content-roleta {
+	background-color: #0f2337 !important;
+    /* background-image: url(<?php echo get_bloginfo('template_url'); ?>/roleta/background-roleta.jpg) !important; */
+	background-position: center !important;
+	background-size: cover !important;
+	color: white;
+	padding: 10px;
+}
+.content-roleta .form-control::placeholder {
+	color: #565656;
+}
+.content-roleta a {
+    text-decoration: none !important;
+    color: #ffeb00 !important;
+}
+@media screen and (max-width: 768px) {
+    .content-roleta {
+        display: block !important;
+        align-items: unset !important;
+    }
+}
+
+.btn-roleta {
+	background-color: #da030b !important;
+	border: none;
+	padding: 10px;
+	font-size: 1em;
+	border-radius: 5px;
+	color: white !important;
+}   
+
+.roleta-title {
+    
+    color: #efefef;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.roleta-text {
+    
+    color: #efefef;
+    font-size: 1.5em;
+
+}
+.content-roleta .close {
+    color: white !important;
+    opacity: 1 !important;
+    font-size: 3em !important;
+}
+</style>
+<div class="modal" id="modalRoleta" aria-labelledby="modalRoleta" aria-hidden="true">
+	<div class="modal-dialog  modal-lg">
+		<div class="modal-content  content-roleta">
+			<div class="modal-body">
 				
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<div class="row">
 					<div class="col-md-12 d-flex justify-content-center">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/roleta/campanha.png" class="img-fluid" width="250" alt="">
+						<img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-aerotown-horizontal-white.png" class="img-fluid" width="250" alt="">
 					</div>
 				</div>
 				<div class="content-center row d-flex">
@@ -35,36 +101,15 @@
 								<div class="my-3">
 									<input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone" required>
 								</div>
+								
 								<div class="my-3">
-									<select name="loja" id="loja" class="form-control area-contato">
-										<option disabled selected>Loja mais próxima</option>
-										<?php
-										$listLojas = array(
-											'post_type' => 'lojas',
-											'posts_per_page' => -1
-										);
-										$wpLojas = new WP_Query($listLojas);
-
-										if ($wpLojas->have_posts()) {
-											while ($wpLojas->have_posts()) {
-												$wpLojas->the_post();
-												$categoryLojas = get_the_terms(get_the_ID(), 'lojas');
-												?>
-												<option value="<?php echo get_the_ID(); ?>"><?php echo $categoryLojas[0]->name . ' - ' . get_the_title(); ?></option>
-												<?php
-											}
-										}
-										?>
-									</select>
-									<div class="my-3">
-										<input type="checkbox" name="aceito" id="aceito" value="sim"> Aceito os termos e condições
-									</div>
+									<input type="checkbox" name="aceito" id="aceito" value="sim"> Aceito os termos e condições
 								</div>
 								<div class="my-3">
-									<button type="submit" class="btn btn-roleta" id="spin_button" >Participar</button>
+									<button type="sub mit" class="btn btn-roleta" id="spin_button" >Participar</button>
 								</div>
 								<div class="my-3">
-									<a href="https://www.redeconomia.com.br/regulamento-roleta-premiada/" class="text-white">VEJA O REGULAMENTO E REGRAS</a>
+									<a href="https://www.aerotown.com.br/" class="text-white">VEJA O REGULAMENTO E REGRAS</a>
 								</div>
 								<div class="spanMessage"></div>
 								<input type="hidden" name="action" value="roleta" />
@@ -77,16 +122,12 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo get_bloginfo('template_url'); ?>/roleta/js/winwheel.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script>
 	$(document).ready(function() { 	
 		$('#modalRoleta').modal('show');
 	});
-	
-	function gtag_report_conversion() {
-		gtag('create', 'AW-824599583', 'auto');
-		gtag('event', 'conversion', { 'send_to': 'AW-824599583/cNbWCMOUzcQBEJ_ImYkD' });
-		console.log('Ads');
-	}
 
 	let theWheel = new Winwheel({
 		'outerRadius'     : 136,        
@@ -118,7 +159,7 @@
 			}
 	});
 
-	let audio = new Audio('https://www.redeconomia.com.br/wp-content/themes/redeconomia/roleta/tick.mp3');
+	let audio = new Audio('https://www.aerotown.com.br/wp-content/themes/aerotown/roleta/tick.mp3');
 	function playSound() { audio.pause(); audio.currentTime = 0; audio.play(); }
 
 	let wheelPower    = 0;
@@ -139,9 +180,8 @@
 	}
 	var sendRoleta = false; var titleText = ''; var contentText = ''; var formRoleta = $("#form-action");
 	formRoleta.submit( function (e) {
-		gtag_report_conversion();
 		if (!sendRoleta) {
-			e.preventDefault();
+			e.preventDefault(); 
 			var content = new FormData(formRoleta[0]);
 			$.ajax({
 				type: 'POST',
@@ -152,7 +192,7 @@
 			}).done( function(returnSend) {
 				var contentReturn = JSON.parse(returnSend);
 				if (contentReturn.status) { 
-					$(".power_controls").html('<h3 class="text-center">Aguarde a roleta terminar de girar!</h3>');
+					$(".power_controls").html('<h3 class="text-center roleta-title">Aguarde a roleta terminar de girar!</h3>');
 					titleText = contentReturn.title;
 					contentText = contentReturn.message;
 					ajaxStateChange(contentReturn.spin);
