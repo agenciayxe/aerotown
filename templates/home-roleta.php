@@ -18,11 +18,11 @@
 
 .content-roleta {
 	background-color: #0f2337 !important;
-    /* background-image: url(<?php echo get_bloginfo('template_url'); ?>/roleta/background-roleta.jpg) !important; */
+    background-image: url(<?php echo get_bloginfo('template_url'); ?>/roleta/background.jpg) !important;
 	background-position: center !important;
 	background-size: cover !important;
 	color: white;
-	padding: 10px;
+	padding: 10px !important;
 }
 .content-roleta .form-control::placeholder {
 	color: #565656;
@@ -30,6 +30,19 @@
 .content-roleta a {
     text-decoration: none !important;
     color: #ffeb00 !important;
+}
+.roleta-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roleta-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roleta-formulario {
+    padding: 30px;
 }
 @media screen and (max-width: 768px) {
     .content-roleta {
@@ -50,13 +63,13 @@
 .roleta-title {
     
     color: #efefef;
-    font-size: 2.5em;
+    font-size: 3.0em;
     font-weight: bold;
 }
 .roleta-text {
     
     color: #efefef;
-    font-size: 1.5em;
+    font-size: 2.0em;
 
 }
 .content-roleta .close {
@@ -69,24 +82,23 @@
 	<div class="modal-dialog  modal-lg">
 		<div class="modal-content  content-roleta">
 			<div class="modal-body">
-				
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<div class="row">
-					<div class="col-md-12 d-flex justify-content-center">
+					<div class="col-md-12 roleta-logo">
 						<img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-aerotown-horizontal-white.png" class="img-fluid" width="250" alt="">
 					</div>
 				</div>
 				<div class="content-center row d-flex">
-					<div class="col-md-6 d-flex justify-content-center">
+					<div class="col-md-6 roleta-box">
 						<div width="345" height="345" class="the_wheel">
 							<canvas id="canvas" width="320" height="320">
 								<p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
 							</canvas>
 						</div>
 					</div>
-					<div class="col-md-6  d-flex justify-content-center align-items-center">
+					<div class="col-md-6 roleta-formulario">
 						<div class="power_controls">
 							<form id="form-action" action="" method="post" enctype="multipart/form-data">
 								<div class="my-3">
