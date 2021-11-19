@@ -132,7 +132,7 @@
 	let theWheel = new Winwheel({
 		'outerRadius'     : 131,        
 		'innerRadius'     : 54,         
-		'textFontSize'    : 9,         
+		'textFontSize'    : 11,         
 		'textOrientation' : 'horizontal',
 		'textAlignment'   : 'center',    
 		'numSegments'     : 14,         
@@ -141,12 +141,27 @@
 			<?php
 				$listPremios = $wpdb->get_results( "SELECT *  FROM roleta_premios" );
 				$h = 0;
+				$cores = array(
+					'#777777',
+					'#FCC911',
+					'#1971BA',
+					'#777777',
+					'#E00A6B',
+					'#2A1DA3',
+					'#777777',
+					'#18B78D',
+					'#FF4E00',
+					'#FCC911',
+					'#777777',
+					'#1971BA',
+					'#E00A6B',
+					'#2A1DA3',
+				);
 				foreach ($listPremios as $singlePremios) {
 					?>
-					{'fillStyle' : '<?php if ($h) { echo '#f8c449'; } else { echo '#da030b';} ?>', 'text' : '<?php echo $singlePremios->nome; ?>'}, 
-					
+					{'fillStyle' : '<?php if (isset($cores[$h])) { echo $cores[$h]; } else { echo '#777777';} ?>', 'text' : '<?php echo $singlePremios->nome; ?>'}, 
 					<?php
-					$h = ($h) ? 0: 1;
+					$h++;
 				}
 			?>
 		],
