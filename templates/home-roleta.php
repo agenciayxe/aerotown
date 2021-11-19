@@ -10,7 +10,7 @@
     background-size: 100%;
     width: 320px;
     height: 480px;
-    padding-top: 53px;
+    padding-top: 55px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -122,20 +122,20 @@
 		</div>
 	</div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 <script src="<?php echo get_bloginfo('template_url'); ?>/roleta/js/winwheel.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script>
 	$(document).ready(function() { 	
 		$('#modalRoleta').modal('show');
 	});
 
 	let theWheel = new Winwheel({
-		'outerRadius'     : 136,        
+		'outerRadius'     : 131,        
 		'innerRadius'     : 54,         
 		'textFontSize'    : 9,         
 		'textOrientation' : 'horizontal',
 		'textAlignment'   : 'center',    
-		'numSegments'     : 17,         
+		'numSegments'     : 14,         
 		'segments'        :             
 		[                                                  
 			<?php
