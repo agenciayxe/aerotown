@@ -121,7 +121,7 @@
 									<button type="sub mit" class="btn btn-roleta" id="spin_button" >Participar</button>
 								</div>
 								<div class="my-3">
-									<a href="https://www.aerotown.com.br/" class="text-white">VEJA O REGULAMENTO E REGRAS</a>
+									<a href="https://www.aerotown.com.br/regulamento-black-friday/" class="text-white">VEJA O REGULAMENTO E REGRAS</a>
 								</div>
 								<div class="spanMessage"></div>
 								<input type="hidden" name="action" value="roleta" />

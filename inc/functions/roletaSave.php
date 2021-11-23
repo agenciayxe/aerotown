@@ -72,6 +72,7 @@ function roletaSave() {
         // Efetua o sorteio
         $sorteio = array_rand($arrayMerge);
         $idPremio = $arrayMerge[$sorteio];
+        // $idPremio = 2;
 
         // Faz uma varredura dos premios
         $adicionaPremio = ($infoPremios[$idPremio]->drawn + 1);
@@ -96,6 +97,7 @@ function roletaSave() {
             )
         );
         if ($insertCustomer) {
+            // mailRoletaNotification($content['nome'], $content['email'], $premio_id);
             $arrayReturn['message'] = $infoPremios[$idPremio]->message;
             $arrayReturn['title'] = $infoPremios[$idPremio]->title;
             $arrayReturn['status'] = true;

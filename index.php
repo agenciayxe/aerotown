@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <style>	
 	.home-banner.banner-page .row .swiper-content .swiper-wrapper .swiper-slide div.banner-slide-single {
-		/*min-height: 300px !important;*/
 		height: auto !important;
 		padding-bottom: 42% !important;
 	}
@@ -404,7 +403,5 @@ if ($popupQuery->have_posts()) {
 </div>
 <script>$(".nav-home").addClass("pag-ativa");</script>	
 <?php 
-if ($_GET['a'] == 'b') {
-	get_template_part('templates/home', 'roleta');
-}
+get_template_part('templates/home', 'roleta');
 get_footer(); ?>
