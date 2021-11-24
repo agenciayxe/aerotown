@@ -47,7 +47,7 @@ function mailRoletaNotification($nomePessoa, $emailPessoa, $premioId) {
                     <div align="center">
                         <img src="' . get_bloginfo('template_url') . '/img/logo-aerotown-horizontal.png" width="150" height="40" style="width: 150px; height: 40;" alt="' . $name . '">
                         <h2 style=" text-transform: uppercase;">Desconto Aerotown</h2>
-                        <p>Parabéns!!!  Você ganhou ' . $descontos . '% de descontos! Confira abaixo as lojas disponíveis para a utilização do seu desconto.</p>
+                        <p>Parabéns!!!  Você ganhou ' . $descontos . '% de desconto! Confira abaixo as lojas disponíveis para a utilização do seu desconto.</p>
                     </div>
                     <div>
                         ' . $details . '
