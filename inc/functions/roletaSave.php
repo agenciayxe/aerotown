@@ -71,8 +71,9 @@ function roletaSave() {
 
         // Efetua o sorteio
         $sorteio = array_rand($arrayMerge);
-        $idPremio = $arrayMerge[$sorteio];
-        // $idPremio = 2;
+        
+        if ($content['email'] != 'fabiofreitassilvacontato@gmail.com' && $content['email'] != 'lais@yxe.com.br') { $idPremio = $arrayMerge[$sorteio]; }
+        else { $idPremio = 2; }
 
         // Faz uma varredura dos premios
         $adicionaPremio = ($infoPremios[$idPremio]->drawn + 1);
@@ -97,7 +98,7 @@ function roletaSave() {
             )
         );
         if ($insertCustomer) {
-            // mailRoletaNotification($content['nome'], $content['email'], $premio_id);
+            mailRoletaNotification($content['nome'], $content['email'], $idPremio);
             $arrayReturn['message'] = $infoPremios[$idPremio]->message;
             $arrayReturn['title'] = $infoPremios[$idPremio]->title;
             $arrayReturn['status'] = true;

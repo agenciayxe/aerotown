@@ -87,7 +87,7 @@
 				</button>
 				<div class="row">
 					<div class="col-md-12 roleta-logo">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-aerotown-horizontal-white.png" class="img-fluid" width="250" alt="">
+						<img src="<?php echo get_bloginfo('template_url'); ?>/roleta/logo-blackfriday-gire.png" class="img-fluid" width="320" alt="">
 					</div>
 				</div>
 				<div class="content-center row d-flex">
