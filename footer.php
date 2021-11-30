@@ -5,7 +5,6 @@
                 <div class="col-xs-12 col-md-8 col-md-offset-2">
                     <h2 class="titulo">CONTATO</h2>
                     <div class="subtitulo">FALE CONOSCO</div>
-                    <!--div class="separador"></div-->
                     <form id="form-contact">
                         <input type="text" name="name" id="name" class="input-contato" placeholder="Nome">
                         <input type="text" name="email" id="email" class="input-contato" placeholder="E-mail">
@@ -27,7 +26,6 @@
             <div class="row">
                 <div class="logo-footer">
                     <div class="col-xs-12">
-                        <!--img src="<?php bloginfo('template_url') ?>/img/aerotown/logo-footer.png" alt="aerotown" style="max-width: 100px"-->
 						<img src="<?php bloginfo('template_url') ?>/img/logo-animada.gif" alt="aerotown" style="max-width: 100px">
                     </div>
                     <div class="col-xs-12">
@@ -48,11 +46,11 @@
 		                	<div class="texto">
         		                HORÁRIO DE FUNCIONAMENTO DE SEGUNDA A SÁBADO<br>
 								<small>
-									<strong>POLO DE MODA: De 9:00 às 20:00 / Estendido até às 21:00 (obrigatório)</strong> <br>
-                                    <em>Horário estendido em dias de eventos e shows.</em><br>
+									<strong>POLO DE MODA: De 10:00 às 21:00</strong> <br>
+                                    <em>Horário estendido em dias de eventos e shows até às 22:00 - (facultativo)</em><br>
                                     (sexta e Sábado) até às 22:00 - facultativo <br><br>
 									<strong>HANGAR FOOD PARK: De 11:00 às 21:00 </strong><br>
-                                    <em>Horário estendido em dias de evento até às 01:00 - (facultativo)</em><br>
+                                    <em>Horário estendido em dias de eventos e shows até às 01:00 - (facultativo)</em><br>
 								</small>
 							</div>
 						</div>						
@@ -60,24 +58,15 @@
 							<div class="texto">                        
 								HORÁRIO DE FUNCIONAMENTO DOMINGOS E FERIADOS<br>
 								<small>
-									<strong>POLO DE MODA: das 13:00 às 19:00 / Estendido até às 21:00 (obrigatório) </strong><br>
-                                    <em>Horário estendido em dias de evento até às 21:00 - (facultativo)</em><br><br>
+									<strong>POLO DE MODA: das 13:00 às 19:00</strong><br>
+                                    <em>Horário estendido em dias de eventos e shows até às 20:00 - (facultativo)</em><br><br>
 									<strong>HANGAR FOOD PARK: de 12:00 às 21:00</strong><br>
-                                    <em>Horário estendido em dias de evento até às 01:00 - (facultativo)</em>
+                                    <em>Horário estendido em dias de eventos e shows até às 01:00 - (facultativo)</em>
 								</small>
 							</div>
 						</div>
 						<div class="col-xs-12">
-							<div class="texto">								
-								<!--<div style="color: #790909;">
-									FUNCIONAMENTO NATAL E ANO NOVO<br>
-									(24 e 31 de Dezembro)<br>
-									<small>
-										AEROTOWN: das 10:00 às 16:00 <br>
-									</small><br>
-									<strong>Estaremos fechados nos dias 25/12 e 01/01.</strong>
-								</div>
-								<br><br>-->
+							<div class="texto">
 								Circulação do público limitada a 40%<br>
                                 Horário de funcionamento em respeito ao decreto n. 48.573 da prefeitura do Rio. <br>
 								TEL: (21) 2070-0500<br>
@@ -85,6 +74,7 @@
 								BARRA DA TIJUCA - RIO DE JANEIRO<br>
 								CEP 22775-002
 							</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,9 +85,6 @@
             <div class="row">
                 <div class="col-xs-12">
                     © <?php echo date('Y'); ?> AEROTOWN POWER CENTER. TODOS OS DIREITOS RESERVADOS.
-                    <!-- <div class="logo-nova">
-                        <a href="http://novastudio.com.br" target="_blank"><img src="<?php bloginfo('template_url') ?>/img/logo-nova-studio.png" alt="Desenvolvido por Nova Studio - Comunicação e Propaganda" title="Desenvolvido por Nova Studio - Comunicação e Propaganda"></a>
-                    </div> -->
                 </div>
             </div>
         </div>

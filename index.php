@@ -403,5 +403,4 @@ if ($popupQuery->have_posts()) {
 </div>
 <script>$(".nav-home").addClass("pag-ativa");</script>	
 <?php 
-get_template_part('templates/home', 'roleta');
 get_footer(); ?>

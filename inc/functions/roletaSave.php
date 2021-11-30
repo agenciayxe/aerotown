@@ -67,7 +67,7 @@ function roletaSave() {
         }
         
         // Adiciona mais vezes o não foi dessa vez
-        for ($h = 0; $h <= 20; $h++) { $arrayMerge[] = 1; }
+        for ($h = 0; $h <= 1; $h++) { $arrayMerge[] = 1; }
 
         // Efetua o sorteio
         $sorteio = array_rand($arrayMerge);
